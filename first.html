@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wila's Birthday</title>
+
+    <!-- TailwindCSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- AlpineJS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- googlefont -->
+    <!-- monsterrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- happybirthdayfont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap"
+      rel="stylesheet"
+    />
+    <!-- additional style -->
+    <style>
+      #poetry {
+        display: block;
+      }
+      #poetry:nth-child(1),
+      #poetry:nth-child(6) {
+        font-weight: bold;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body class="bg-basic text-primary p-8 xl:py-16 xl:px-56">
+    <div class="container mx-auto bg-bg">
+      <header class="">
+        <audio autoplay src="./music/music.mp3"></audio>
+        <img class="mx-auto" src="./img/hbdavatar.png" alt="" />
+        <div class="p-4">
+          <img
+            class="mx-auto max-w-[16rem] mb-8"
+            src="./img/fotofirstanother.jpg"
+            alt=""
+          />
+          <p
+            class="font-poppins font-normal text-md xl:text-xl text-center p-4"
+          >
+            Selamat ulang tahun sayaangkuu🎂🥳🎉 yang sangat aku sayaang, yang
+            sangat cantik, imut, gemoy, lucu dan menggemaskan
+            <span class="font-semibold">Wila Putri Albira Siregar.</span>
+            Sehat selalu, lancar rezeki, semoga dipermudah segala urusannya
+          </p>
+        </div>
+      </header>
+      <div
+        id="gift"
+        class="container p-8 mx-auto"
+        x-data="{poetry: false, image: false}"
+      >
+        <p
+          class="mx-auto max-w-sm text-sm xl:text-lg font-semibold text-center mb-4"
+        >
+          Sayaanggg aku punya dua hadiah untuk sayaaangg, mungkin hadiahnya
+          bukan berupa materi, tapi aku membuat ini dengan kemampuan yang aku
+          bisa. Aku harap sayaangg suka yahh.
+        </p>
+        <button
+          @click="poetry = !poetry"
+          class="mx-auto mb-4 block px-4 py-2 bg-bg shadow-lg shadow-basic rounded-lg font-bold text-primary"
+        >
+          KLIK DISINI
+        </button>
+        <div
+          class="mx-auto p-8 mb-8 font-medium shadow-lg shadow-basic text-sm xl:max-w-xl xl:text-xl"
+          x-show="poetry"
+        >
+          <span id="poetry">Sayaangkuu,</span>
+          <span id="poetry">Tatapan mata yang begitu indah</span>
+          <span id="poetry">Senyum bibir yang melukiskan kesempurnaan</span>
+          <span id="poetry">Tawa yang menggemakan keceriaan</span>
+          <span id="poetry">Merupakan arti dari dirimu</span>
+          <span id="poetry">Sayaangkuu</span>
+          <span id="poetry">Hari ini adalah hari istimewamu</span>
+          <span id="poetry">Bertambah satu tahun usiamu</span>
+          <span id="poetry">Disini aku meminta untukmu</span>
+          <span id="poetry">Selalu yang terbaik yang diberikan padamu</span>
+          <span id="poetry"></span>
+        </div>
+        <button
+          @click="image = !image"
+          class="mx-auto mb-8 block px-4 py-2 bg-bg shadow-lg shadow-basic rounded-lg font-bold text-primary"
+        >
+          KLIK DISINI
+        </button>
+        <img
+          x-show="image"
+          class="shadow-xl shadow-basic"
+          src="./img/fotopart.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>
